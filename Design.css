@@ -1,0 +1,275 @@
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CSS variables */
+:root{
+    --navbar-height: 59px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Navigation Bar: Logo and Image */
+
+#logo{
+    margin: 2px 12px;
+}
+#logo img{
+    width: 63px;
+}
+#logo img:hover{
+    transform:rotate(45deg); 
+    transition-duration: 2s;
+    filter:brightness(1.3)
+}
+/* Navigation Bar: List styling */
+#navbar ul{
+    display: flex;
+    
+}
+#navbar ul li{
+    list-style: none;
+}
+
+#navbar ul li a{
+    padding: 4px 15px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(246, 243, 236);
+    text-shadow: 12px;
+    font-size: 18px;
+}
+#navbar ul li a:hover{
+    color: rgb(22, 18, 20);
+    background-color: rgb(235, 240, 238);
+    border-radius: 23px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Navigation Bar: Search bar */
+.search{
+    padding: 7px 55px;
+    float: right;
+}
+#search{
+    border-radius: 3px;
+    border: 2px solid black;
+    /* border-radius: 9px; */
+    
+}
+/* Home Section */
+#home{
+    justify-content: center;
+    align-items: center;
+    padding: 3px 223px;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+}
+
+#home::before{
+    content: "";
+    background: url('chad-montano-eeqbbemH9-c-unsplash.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 67%;
+    top: 0px;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size: 3rem;
+    font-family: 'Unbounded', cursive;
+    color: rgb(65, 7, 7);
+    font-weight: 400;
+}
+.h-secondary{
+    font-size: 3rem;
+    color: rgb(173, 91, 28);
+    color: rgb(181, 16, 16);
+    font-weight: 600;
+    font-family: 'Unbounded', cursive;
+    border: 7px double rgb(149, 34, 34);
+    border-radius: 34px;
+    text-shadow: 3px 4px 12px rgb(119, 125, 74); /*Text-shadow*/
+}
+.h-secondary:hover{
+    transform-origin: top-left;
+    transition-duration: 2s;
+    border: 7px double rgb(149, 34, 34);
+    transform: scaleX(1.2);
+    text-shadow: 3px 4px 12px rgb(230, 206, 26); /*Text-shadow*/
+}   
+.btn{
+    padding: 3px 12px;
+    margin: 62px;
+    border: 3px solid brown;
+    background-color: antiquewhite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 9px;
+}
+.btn:hover{
+    background-color: brown;
+    color: hsl(34, 78%, 91%);
+    border: 3px solid hsl(34, 78%, 91%);
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}
+
+.text{
+    padding: 23px;
+    color: rgb(44, 22, 7);
+    font-family: cursive;
+    margin-top: 34px;
+    text-shadow: 23px greenyellow;
+    font-size: 20px;
+    font-weight: 300;
+}
+.text:hover{
+    color: rgb(191, 202, 211);
+}
+
+/* Services Section */
+
+#services-container h1{
+    text-align: center;
+    padding: 23px;
+    font-size: 34px;
+    color: brown;
+}
+#services-container{
+    background-color: rgba(255, 228, 196, 0.753);
+}
+#services .box img{
+    width: 215px;
+    height: 232.91px;
+    display: block;
+    margin: auto; /*This is a way to bring the image into center of box*/
+}
+#services .box{
+    border: 3px solid brown;
+    border-radius: 12px;
+    background-color: rgb(189, 151, 104);
+    text-align: center;
+    align-items: center;
+    width: 33%;
+    margin: 2px;
+}
+#services .box:hover{
+    transform: scale(0.96);
+    transition-duration: 1s;
+    box-shadow: 14px 6px rgba(24, 24, 24, 0.756);
+    background-color: rgb(226, 226, 212);
+}
+
+#services{
+    display: flex;
+    padding: 12px;
+}
+#services .box p{
+    height: 55.2px;
+}
+
+/* Clients Section */
+
+#client-section h1{
+    text-align: center;
+    font-size: 34px;
+    color: brown;
+}
+
+#client-section::before{
+    content: "";
+    background: url('bader-photographer-2vEnKc5KR-Y-unsplash.jpg') no-repeat center center/cover ;
+    position: absolute;
+    width: 100%;
+    height: 81%;
+    z-index: -1;
+    opacity: 0.8;
+}
+ #clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 303px;
+    border: 3px solid black;
+    border-radius: 14px;
+    margin: 12px;
+ }
+ .client-item img{
+    width: 200px;
+    padding: 23px 83px;
+}
+ .client-item img:hover{
+    transform: scale(0.96);
+    transition-duration: 0.8s;
+ }
+
+ /* Contact Section */
+#contact{
+    text-align: center;
+    position: relative;
+}
+
+#contact h1{
+    font-size: 1.7rem;
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.details{
+    border: 2px solid brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-group{
+    color: rgb(10, 2, 2);
+}
+.form-group label{
+    padding: 0px 12px;
+}
+.contact-box{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn1{
+    margin: 12px;
+    border: 3px solid brown;
+    background-color: antiquewhite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 8px;
+}
+.btn1:hover{
+    background-color: rgba(175, 163, 163, 0.463);
+}
+footer{
+    background-color: black;
+    color: white;
+}
